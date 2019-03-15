@@ -1,0 +1,76 @@
+@import "normalize";
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.wrap_scroll{
+    background-color: aqua;
+    width: 399px;
+    max-width: 1700px;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@supports not (font-size: calc(25%)) {
+    .wrap_scroll { 
+        overflow: auto;
+    }
+    .cus_scroll{
+        display: none;
+    }
+}
+
+.table{
+    background-color: brown;
+    height: 80px;
+    width: 1800px;
+}
+
+.cus_scroll, .cus_slider{
+    border-radius: 2px;
+    
+}
+.cus_scroll{
+    width: 100%;
+    background-color: #cbcbcb;
+}    
+.cus_slider{
+    background: #307fbd;
+    cursor: pointer;
+    width: 0.0%;
+    min-width: 23px;
+    height: 20px;
+    margin-left: 0;
+}
+.cus_slider:hover{
+    background: #1d6cab;
+}
+.bga{
+    min-height: 100%;
+    min-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/**
+ * Тестирование
+*/
+.wrap_scroll:nth-of-type(1){
+    width: 100%;
+}
+.wrap_scroll:nth-of-type(2){
+    width: 330px;
+}
+.wrap_scroll:nth-of-type(3){
+    width: 151px;
+}
